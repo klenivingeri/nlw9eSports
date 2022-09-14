@@ -10,6 +10,7 @@
  - npm install
  - tailwindcss postcss autoprefixer -D // style
  - npx tailwindcss init -p // criar os arquivos de configuração 
+ - phosphor-react // icones
 
 
 ### Extenções vsCode
