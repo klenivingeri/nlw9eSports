@@ -7,3 +7,6 @@ config: blank (TypeScript) same as blank but with TypeScript configuration
 ### Estrutura do projeto
 Dentro do arquivo App.tsx o component {StatusBar} controla a barra superior de status bar.
 Exemplo: `<StatusBar style="auto" backgroundColor="red" />`
+
+### Extenção
+R component
