@@ -10,3 +10,9 @@ Exemplo: `<StatusBar style="auto" backgroundColor="red" />`
 
 ### Extenção
 R component
+```
+SNIPPETS:
+rsno == cria component styled
+rnbc == cria component
+
+```
