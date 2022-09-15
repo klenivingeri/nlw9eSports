@@ -1,4 +1,3 @@
-
 import { ImageBackground } from 'react-native';
 import backgroundImg from '../../assets/background-galaxy.png';
 import { styles } from './styles';
