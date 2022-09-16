@@ -32,6 +32,8 @@
 - ts-node-dev -D // parecido com nodemon, mas para ts
 - npm i prisma -D
 - npx prisma init --datasource-provider SQLite // cria configuração
+- npm i @prisma/client // acessar ao banco de dados
+- npx prisma generate // configura as table ts
 
 ### Prisma
 Entrar no arquivo env e ajustar o local da criação do banco.

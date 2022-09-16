@@ -1,9 +1,15 @@
 import express from 'express'
+import { PrismaClient } from '@prisma/client'
 
 const app = express()
+const prisma = new PrismaClient({
+  log: ['query']
+}) // faz a conexão com o banco automaticamente
 
-app.get('/games', (request, response) => {
-  return response.status(200).json([])
+app.get('/games', async (request, response) => {
+  const games = await prisma.game.findMany()
+
+  return response.status(200).json(games)
 })
 
 app.post('/ads', (request, response) => {
@@ -12,7 +18,7 @@ app.post('/ads', (request, response) => {
 
 app.get('/games/:id/ads', (request, response) => {
   const  { id } = request.params
-  
+
   return response.json([{id:1}, {id:2}, {id:3}])
 })
 
