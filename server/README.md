@@ -32,7 +32,22 @@
 - ts-node-dev -D // parecido com nodemon, mas para ts
 - npm i prisma -D
 - npx prisma init --datasource-provider SQLite // cria configuração
+
 ### Prisma
+Entrar no arquivo env e ajustar o local da criação do banco.
+Depois ir no arquivo schema.prisma, mais inforações dentro do arquivo
+Exemplo de criação de table no banco
+```
+model Game {
+  id        String @id
+  title     String
+  bannerUrl String
+}
+```
+Para ver o banco, dar botão direito no arquivo database/db.sqlite e clicar em open database.
+
+- interface grafica do prisma
+npx prisma studio
 
 ### Dicas
 - Alterar de require para import:
@@ -49,3 +64,4 @@ Dentro da arquivo package.json adicionar `type: module` e alterar a extenção d
 
 ### Extenção
 - Prisma
+- SQLite
