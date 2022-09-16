@@ -14,6 +14,26 @@ model Game {
   id        String @id
   title     String
   bannerUrl String
+  ads       Ad[]
+}
+
+// executar "npx prisma migrate dev" para criar as migration
+// Depois de excutar o comando dar o nome(como se fosse um commit)
+// depois disso a tabela é criada
+
+model Ad {
+  id              String   @id
+  gameId          String
+  name            String
+  yearsPlaying    Int
+  discord         String
+  weekDays        String
+  hourStart       Int
+  hourEnd         Int
+  useVoiceChannel Boolean
+  createdAt       DateTime @default(now()) // Passa a data Atual na criação
+
+  game Game @relation(fields: [gameId], references: [id]) //referencia outra tabela 
 }
 
 // executar "npx prisma migrate dev" para criar as migration
