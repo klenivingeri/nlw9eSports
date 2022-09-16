@@ -7,7 +7,15 @@ const prisma = new PrismaClient({
 }) // faz a conexão com o banco automaticamente
 
 app.get('/games', async (request, response) => {
-  const games = await prisma.game.findMany()
+  const games = await prisma.game.findMany({
+    include: {
+      _count: {
+        select: {
+          ads: true,
+        }
+      }
+    }
+  }) // Informa a quantidades de ads para o game 
 
   return response.status(200).json(games)
 })
