@@ -27,6 +27,8 @@
 
 ## Pacotes instalados
 - express
+- cors
+- @types/cors -D
 - @types/express -D
 - typescript -D
 - ts-node-dev -D // parecido com nodemon, mas para ts
